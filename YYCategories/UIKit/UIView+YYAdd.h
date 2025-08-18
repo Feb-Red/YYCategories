@@ -52,11 +52,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeAllSubviews;
 
 /**
- Returns the view's view controller (may be nil).
- */
-@property (nullable, nonatomic, readonly) UIViewController *viewController;
-
-/**
  Returns the visible alpha on screen, taking into account superview and window.
  */
 @property (nonatomic, readonly) CGFloat visibleAlpha;

@@ -70,17 +70,6 @@ YYSYNTH_DUMMY_CLASS(UIView_YYAdd)
     }
 }
 
-
-- (UIViewController *)viewController {
-    for (UIView *view = self; view; view = view.superview) {
-        UIResponder *nextResponder = [view nextResponder];
-        if ([nextResponder isKindOfClass:[UIViewController class]]) {
-            return (UIViewController *)nextResponder;
-        }
-    }
-    return nil;
-}
-
 - (CGFloat)visibleAlpha {
     if ([self isKindOfClass:[UIWindow class]]) {
         if (self.hidden) return 0;
